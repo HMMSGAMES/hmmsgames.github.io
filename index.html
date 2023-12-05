@@ -1,51 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Games</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <style>
-    body {
-      background-color: #000000;
-      margin: 0;
-      overflow: hidden;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <style>
+                .play-button {
+        border: 2px solid white;
+        font-weight: bold;
+        border-radius: 10px;
+        background-color: transparent;
+        padding: 8px 14px;
+        font-size: 30px;
+        font-family: 'Maven Pro';
+        cursor: pointer;
+        margin: 0 8px;
+        color: white;
+        transition: transform 0.2s, font-size 0.1s;
+        flex: content;
+        align-self: center;
+        justify-self: center;
+      }
+       .play-button:hover {
+        transform: scale(1.05);
+        font-size: 34px;
+       body {
+        margin: 0;
+        font-family: 'Maven Pro';
+        font-weight: bold;
+        color: white;
+	font-size: 35px;
+        overflow: hidden;
+        }
+    </style>
 </head>
-<body>
-<script>
-  window.onload = function() {
-    var newTab = window.open('about:blank', '_blank');
-    if (newTab) {
-      newTab.document.write(`
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title></title>
-          <style>
-            body {
-              margin: 0;
-              background-color: #000000;
-	      overflow: hidden;
-            }
-            iframe {
-              width: 100%;
-              height: 100vh;
-              border: none;
-	      overflow: hidden;
-            }
-          </style>
-        </head>
-        <body>
-          <iframe src="https://hmmsgames.github.io/passwordpro/" allowfullscreen></iframe>
-        </body>
-        </html>
-      `);
-      newTab.document.close();
-      window.close();
-    } else {
-      alert('enable popups');
-    }
-  };
-</script>
+<body style="background-color: black;"> 
+     <button class="play-button" onclick="window.location.href= 'https://hmmsgames.github.io/passwordpro';">Start Playing</button>
 </body>
 </html>
